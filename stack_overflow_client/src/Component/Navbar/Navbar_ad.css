@@ -1,0 +1,345 @@
+/*outer box for navbar*/
+.topnav{
+    position: fixed;
+    top: 0;
+    background-color: antiquewhite;
+    /* background-color: rgb(35, 33, 33); */
+    z-index: 4;
+    width: 100%;
+    height: 40px;
+    padding: 5px 4px;
+}
+
+
+/* Left Toggler Css */
+.lefttoggler{
+    float: left;
+    display: flex;;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 36px;
+    cursor: pointer;
+    color: rgb(132, 126, 126);
+}
+
+.lefttoggler_icon{
+    height: 20px;
+    width: 28px;
+}
+
+.lefttoggler_content{
+    z-index: 1;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    padding: 10px 0;
+    width: 200px;
+    height: 100%;
+    background-color: rgb(248, 244, 244);
+}
+
+.lefttoggler_container{
+    
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.lefttoggler_links
+{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 10px;
+    width: 80%;
+    color: rgb(103, 97, 97);
+    text-decoration: none !important;
+}
+
+
+.active{
+    color: black;
+    background-color: rgb(225, 218, 218);
+    border-right: 2px solid orangered;
+}
+
+.lefttoggler_links:hover{
+    background-color: rgb(225, 218, 218);
+    color: black;
+}
+
+
+
+/* Brand Name and Icon */
+.brand{
+    float: left;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px 0 10px;
+    height: 40px;
+    font-family: 'Ubuntu',sans-serif;
+    cursor: pointer;
+    color: black;
+}
+
+.brand_name{
+    font-size: 20px;
+    margin-left: 4px;
+}
+
+.brand_icon{
+    height: 30px;
+}
+
+
+/* Search Box */
+.search{
+    position: absolute;
+    left:30%;
+    float: right;
+    display: flex;;
+    align-items: center;
+    justify-content: space-around;
+    height: 40px;
+    width: 40%;
+    background-color: white;
+    border-radius: 20px 20px;
+    color: rgb(165, 155, 155);
+    border: 1px solid rgb(83, 81, 81);
+}
+
+.search_input{
+    position: absolute;
+    left: 0;
+    border-radius: 20px 0 0 20px;
+    padding: 0 10px;
+    height:36px;
+    width: calc(100% - 43px);
+    border: none;
+}
+
+.search_iconbox{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    height: 36px;
+    padding: 2px 4px;
+    width: 35px;
+    border-radius: 0 20px 20px 0;
+    border: 1px solid rgb(83, 81, 81);
+    border-right: none;
+    cursor: pointer;
+}
+
+.search_iconbox:hover{
+    color: black;
+}
+
+/* Search Suggestion Box */
+.search_suggestion{
+    z-index: 1;
+    position: absolute;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: rgb(241, 237, 237);
+    padding: 5px;
+    width: 36%;
+    left: 30%;
+    color: rgb(100, 97, 97);
+}
+
+.search_suggestion_div{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: calc(100%-25px);
+    height: 30px;
+    padding: 0 5px 0 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search_suggestion_div:hover{
+    color: black;
+    background-color: rgb(225, 214, 214);
+}
+
+/* Search Box mobile view For making it responsive */
+
+.search530{
+    left: calc(100% - 180px);
+    width: 40px ;
+    background-color: none;
+}
+
+.searchmobileview{
+    left: 50px;
+    width: calc(100% - 80px);
+}
+
+.searchsuggestionview{
+    left: 50px;
+    width: calc(100% - 120px) !important;
+}
+
+.searchsuggestion_divview{
+    width: calc(100% - 25px) !important;
+}
+
+
+/* Right toggler Box */
+.righttoggler{
+    float: right;
+    display: flex;;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 25px;
+    cursor: pointer;
+    color:rgb(132, 126, 126);
+}
+
+.righttoggler_icon{
+    height: 20px;
+    width: 28px;
+}
+
+.righttoggler_content{
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(238, 242, 242, 0.783);
+    width: 200px;
+    padding: 5px 5px;
+    right: 100px;
+    border-radius: 5px;
+    top: 50px;
+    color: rgb(56, 57, 58);
+}
+
+.righttoggler_content_div{
+    width: 190px;
+    padding: 5px 5px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.righttoggler_content_div:hover{
+    color: black;
+    background-color: rgb(234, 228, 228);
+    border-bottom: 2px solid orange;
+}
+
+.lefttoggler:hover ,.righttoggler:hover{
+    color: black;
+}
+
+/*Login and Sign in Box */
+.login{
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80px;
+    height: 40px;
+    padding: 0 5px 0 5px;
+    background-color: rgb(224, 229, 233);
+    border-radius: 20px;
+    margin: 0 10px 0 8px;
+    cursor: pointer;
+    color: rgb(176, 163, 163);
+    transition: 0.1s;
+}
+
+.with_login{
+    float: right;
+    margin: 2px 10px 0 8px;
+    transition: 0.1s;
+    cursor: pointer;
+    display: flex;
+    background-color: rgb(224, 229, 233);
+    color: rgb(176, 163, 163);
+    height: 30px;
+    width: 24px;
+    border-radius: 50%;
+    padding: 3px 5px;
+}
+
+.with_login:hover,.login:hover{
+    background-color: white;
+} 
+
+.login span{
+    font-size: medium;
+    font-weight: 600;
+}
+
+.login_icon{
+    height: 30px;
+    width: 24px;
+}
+
+.login:hover .login_icon ,.login:hover span,.with_login:hover .login_icon{
+    color: rgb(96, 90, 90);
+}
+
+.displaynone{
+    display: none;
+}
+
+.login_content_box{
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    z-index: 1;
+    padding: 5px 5px;
+    background-color: rgb(241, 235, 235);
+    border-radius: 5px;
+    width: 200px;
+    color: rgb(70, 68, 68);
+    padding: 5px 5px;
+    text-align: left;
+}
+
+.login_content{
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+    color: rgb(70, 68, 68);
+    border-radius: 5px;
+    text-decoration: none;
+    width: 190px !important;
+}
+
+.login_content:hover,.login_content:focus{
+    background-color: white;
+    border-bottom: 2px solid orange;
+    cursor: pointer;
+    color: black;
+}
+
+
+@media screen and (max-width:530px)
+{
+    .search_iconbox{
+        border: none;
+    }
+    
+}
+
+/* For making brand name invisible when max width of 340px  */
+@media screen and (max-width:340px){
+    .brand_name{
+        display: none;
+    }
+}

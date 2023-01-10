@@ -1,0 +1,149 @@
+.App {
+  text-align: center;
+}
+.top{
+  display: flex;
+  width: 100%;
+  height: 50px;
+}
+
+.container{
+  float: right;
+  margin: 10px 10px;
+  width: calc(100% - 220px);
+  border-left: 1px solid black;
+  min-height:100vh ;
+}
+
+.row::after{
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.left_container{
+  float: left;
+  text-align: left;
+  display: flex;
+  width: calc(100% - 350px);
+  flex-direction: column;
+  padding:10px 0;
+}
+
+
+.right_container{
+  float: right;
+  width: 40%;
+  max-width: 300px;
+  padding:10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.tech_tag{
+  display: inline-block;
+  width: max-content;
+  padding: 3px 5px;
+  font-size: smaller;
+  color: #0c3d62c5;
+  border-radius: 3px;
+  background-color: #b2d7f2;
+  cursor: pointer;
+  margin-left: 5px;
+  text-decoration: none !important;
+}
+
+.tech_tag:hover{
+  color: black;
+  background-color: #98c9ec;
+}
+
+
+.form_title{
+  font-size: 25px;
+  margin: 5px 5px;
+}
+
+.form_field{
+  margin: 4px 0;
+  width: calc(100% - 25px);
+  display: flex;
+  flex-direction: column;
+}
+
+.form_message{
+  min-height: 100px;
+}
+
+.form_description{
+  font-size: x-small;
+  margin: 5px 0;
+  text-align: left;
+}
+
+.form_label{
+  text-align: left;
+  width: 100%;
+  padding-bottom: 5px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form_forgot_label{
+  display: flex;
+
+}
+
+.form_input{
+  display: block;
+  font-size: 13px;
+  height: 18px;
+  padding: 5px 5px;
+}
+
+.form_button{
+  text-align: center;
+  width: calc(100% - 25px);
+  padding: 4px 0;
+  height: 25px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #0A95FF;
+  cursor: pointer;
+  border: none;
+}
+
+.form_seconbutton{
+  width: max-content;
+  padding: 6px 6px;
+  cursor: pointer;
+}
+
+.form_forgot{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: x-small;
+  cursor: pointer;
+}
+
+.form_button:hover{
+  background-color: #47aaf5;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+
+@media  screen and (max-width:630px) {
+
+  .container{
+      width: calc(100% - 20px);
+  }
+  
+}
