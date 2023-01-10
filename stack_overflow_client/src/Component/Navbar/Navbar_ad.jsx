@@ -10,6 +10,8 @@ import Searchsuggestion from './Searchsuggestion'
 import Righttogglercontent from './Rightcontent'
 import { useSelector,useDispatch} from 'react-redux'
 import { logOut } from '../../actions/auth'
+import brand from '../../assets/logo.png'
+import brandicon from '../../assets/icon.png'
 
 
 export default function Navbar_ad() {
@@ -37,7 +39,7 @@ export default function Navbar_ad() {
 
     //To get responsive feature for Navbar components 
     useEffect(()=>{
-        if(size[0]>530)
+        if(size[0]>620)
         {
             setInputdisplay(""); 
             setNavdisplay(true); 
@@ -178,8 +180,11 @@ export default function Navbar_ad() {
                 
                 <Link to='/'>
                     <div className="brand">
-                        <FaYoutube className='brand_icon'/>
-                        <span className='brand_name'>Youtube</span>
+                    <img className='brand_icon' src={brandicon}></img>
+                        {/* <img className='brand_icon' src={brand}></img> */}
+
+                        {/* <FaYoutube className='brand_icon'/> */}
+                        <span className='brand_name'>stack<span style={{fontWeight:"700",marginLeft:'3px'}}>overflow</span></span>
                     </div>
                 </Link>
                 {
@@ -210,7 +215,7 @@ export default function Navbar_ad() {
 
         }
         
-        <div className={`search ${inputdisplay}`}>
+        <div className={`search ${inputdisplay} ${User?(inputdisplay==='search530'?'search_withlogin':''):''}`}>
             <input type='search' className={`search_input ${inputdisplay==='search530'?('displaynone'):("")}`} placeholder='Search...' value={inputValue||""} onChange={handleinputChange} />
             <span className='search_iconbox' onClick={handleSearch}>
                 <FaSearch className='search_icon'/>
