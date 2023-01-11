@@ -79,13 +79,12 @@ export const sendMailtome = async(req,res) => {
     try{
 
         let transporter = nodemailer.createTransport({
-            // host: 'smtp.gmail.com',
             service:'gmail',
             port: 465,
             secure: true,
             auth: {
-                user: 'amansolanki23059@gmail.com',
-                pass: 'abmcjhefxsffjxwe'
+                user: process.env.USER,
+                pass: process.env.PASS
             },
         });
     

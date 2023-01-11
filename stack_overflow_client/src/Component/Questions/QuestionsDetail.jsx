@@ -89,7 +89,6 @@ export default function QuestionsDetail() {
     const handleShare = () =>{
         copy(process.env.REACT_APP_URL+location.pathname);
         alert('Copied Url: '+ process.env.REACT_APP_URL+location.pathname)
-
     }
 
 
