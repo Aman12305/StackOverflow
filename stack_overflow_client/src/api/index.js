@@ -1,6 +1,8 @@
 import axios from 'axios'
 
-const API = axios.create({ baseURL: 'http://localhost:5000'})
+const baseUrl = process.env.REACT_APP_API
+
+const API = axios.create({ baseURL: baseUrl})
 
 API.interceptors.request.use((req) => {
     if(localStorage.getItem('Profile')){
